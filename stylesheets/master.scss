@@ -7,6 +7,12 @@ $startup-pink: #E9018B;
   }
 }
 
+@mixin tablet {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
 html,
 body {
   width: 100%;
@@ -59,7 +65,7 @@ header {
       padding-top: 7rem;
       @include mobile {
         width: 100%;
-        padding: 5rem 5px;
+        padding: 0  5px;
       }
     }
   }
@@ -101,6 +107,26 @@ header {
 .startups {
   background-color:#ffffff;
   padding: 5rem 0;
+  .team-info {
+    padding-top: 15px;
+    padding: 0 12rem;
+    .team {
+      font-weight: lighter;
+      margin: 0 auto;
+      @include tablet {
+        float: left !important;
+        width: 33% !important;
+      }
+      @include mobile {
+        float: none !important;
+        width: 100% !important;
+      }
+      .profile {
+        padding-top: 10px;
+        color:$startup-pink;
+      }
+    }
+  }
 
   h2 {
     text-align: center;
@@ -111,19 +137,30 @@ header {
   }
   .logos-table {
     margin: 0 auto;
-
     .startup-feature {
-      padding: 3rem;
-      max-width: 25rem;
+      max-width: 20rem;
+      padding: -5rem;
       align-items: center;
       justify-content: center;
       text-align: center;
-      @include mobile {
-        padding: 1rem;
-      }
       h4 {
         text-align:center;
       }
+    }
+  }
+
+  .center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+  }
+  .list-item {
+    max-width: 30rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h4 {
+      text-align:center;
     }
   }
 }
@@ -140,21 +177,6 @@ footer {
     padding-bottom: 3rem;
     @include mobile {
       font-size: 2.5rem;
-    }
-  }
-  .team-info {
-    padding-top: 15px;
-    .team {
-      font-weight: lighter;
-      margin: 0 auto;
-      max-width: 15rem;
-      @include mobile {
-        float: none;
-      }
-      .profile {
-        padding-top: 10px;
-        color:$startup-pink;
-      }
     }
   }
   .contact {
