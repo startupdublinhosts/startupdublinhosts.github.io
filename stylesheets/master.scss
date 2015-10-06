@@ -116,7 +116,9 @@ header {
   padding: 5rem 0;
   .team-info {
     padding-top: 15px;
-    padding: 0 12rem;
+    //padding: 0 12rem;
+    margin:0 auto;
+    max-width:80%;
     .team {
       font-weight: lighter;
       margin: 0 auto;
@@ -127,6 +129,8 @@ header {
       @include mobile {
         float: none !important;
         width: 100% !important;
+        max-width: 30rem;
+        padding: 2rem 0;
       }
       .profile {
         padding-top: 10px;
