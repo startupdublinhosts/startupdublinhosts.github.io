@@ -29,7 +29,7 @@ body {
 header {
   background: url("http://i.imgur.com/aLOGkpc.png") no-repeat center bottom;
   background-size: cover;
-  height: 500px;
+  height: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,17 +55,24 @@ header {
     .plus {
       @include mobile {
         padding: 2rem 0;
+        font-size: 2rem;
+      }
+    }
+    .header-text h2 {
+      color: white;
+      font-weight: lighter;
+      @include mobile {
+        font-size: 2rem;
       }
     }
     .logo {
       margin: 0 auto;
-      padding: 5rem 0;
+      padding-top: 4rem;
       max-width: 60rem;
       min-width: 0;
-      padding-top: 7rem;
       @include mobile {
+        max-width: 80rem;
         width: 100%;
-        padding: 0  5px;
       }
     }
   }
