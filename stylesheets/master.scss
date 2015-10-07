@@ -8,7 +8,7 @@ $startup-pink: #E9018B;
 }
 
 @mixin tablet {
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 800px) {
     @content;
   }
 }
@@ -119,15 +119,13 @@ header {
   padding: 5rem 0;
   .team-info {
     padding-top: 15px;
-    //padding: 0 12rem;
     margin:0 auto;
     max-width:80%;
     .team {
       font-weight: lighter;
       margin: 0 auto;
       @include tablet {
-        float: left !important;
-        width: 33% !important;
+        width: 70%;
       }
       @include mobile {
         float: none !important;
