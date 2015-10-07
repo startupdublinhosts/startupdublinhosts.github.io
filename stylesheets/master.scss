@@ -70,6 +70,9 @@ header {
       padding-top: 4rem;
       max-width: 60rem;
       min-width: 0;
+      @include tablet {
+        width: 100%;
+      }
       @include mobile {
         max-width: 80rem;
         width: 100%;
