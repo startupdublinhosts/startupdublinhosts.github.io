@@ -178,6 +178,24 @@ header {
       text-align:center;
     }
   }
+
+  .form-btn {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+
+    h4 {
+      color:$startup-pink;
+    }
+
+    .large {
+      padding: .5rem;
+      width: 20rem;
+      height: 5rem;
+    }
+  }
 }
 
 /* FOOTER */
