@@ -228,7 +228,38 @@ footer {
       font-size: 2.5rem;
     }
   }
+  .blog-posts
+  {
+    padding-bottom: 3rem;
+    .blog
+    {
+      margin: 0 auto;
+      display:block;
+      width:15rem;
+      height:15rem;
+      border-radius:15rem;
+      font-size:2rem;
+      color:gray;
+      line-height:15rem;
+      text-align:center;
+      text-decoration:none;
+      background: url("http://i.imgur.com/4OnhFAF.png");
+      @include tablet {
+        width:10rem;
+        height:10rem;
+        border-radius:10rem;
+        line-height:10rem;
+      }
+    }
+    .blog:hover
+    {
+      color:$startup-pink;
+      text-decoration:none;
+      opacity: 0.7;
+    }
+  }
   .contact {
+    padding-top: 30px;
     @include mobile {
       padding-top: -20px;
     }
@@ -254,6 +285,11 @@ footer {
       .icon {
         color: $startup-pink;
       }
+    }
+    .circletag:hover
+    {
+      text-decoration:none;
+      opacity: 0.7;
     }
   }
 }
