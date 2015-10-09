@@ -13,6 +13,12 @@ $startup-pink: #E9018B;
   }
 }
 
+@mixin xs-screen {
+  @media only screen and (max-width: 990px) {
+    @content;
+  }
+}
+
 html,
 body {
   width: 100%;
@@ -121,6 +127,9 @@ header {
     padding-top: 15px;
     margin:0 auto;
     max-width:80%;
+    @include xs-screen {
+      max-width: 100%;
+    }
     .team {
       font-weight: lighter;
       margin: 0 auto;
@@ -203,9 +212,11 @@ footer {
   padding: 60px 0;
   color: white;
 
-  h2 {
+  h3 {
+    margin-top: -1rem;
     text-align: center;
     padding-bottom: 3rem;
+    font-weight: lighter;
     @include mobile {
       font-size: 2.5rem;
     }
@@ -217,6 +228,10 @@ footer {
     a {
       color: $startup-pink;
       text-decoration: none;
+    }
+    h4 {
+      font-size: 2rem;
+      font-weight: lighter;
     }
     .circletag {
       display: block;
