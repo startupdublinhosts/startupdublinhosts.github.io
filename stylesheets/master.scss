@@ -240,15 +240,23 @@ footer {
       border-radius:15rem;
       font-size:2rem;
       color:gray;
-      line-height:15rem;
+      line-height:5rem;
       text-align:center;
       text-decoration:none;
-      background: url("http://i.imgur.com/4OnhFAF.png");
+      background: url("http://i.imgur.com/5W37lDF.png");
+      .logo-small {
+        padding-top: 4rem;
+        margin: 0 auto;
+        width: 6rem;
+      }
       @include tablet {
         width:10rem;
         height:10rem;
         border-radius:10rem;
-        line-height:10rem;
+        line-height:5rem;
+        .logo-small {
+          padding-top: 1rem;
+        }
       }
     }
     .blog:hover
