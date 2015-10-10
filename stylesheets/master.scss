@@ -283,16 +283,13 @@ footer {
       font-weight: lighter;
     }
     .circletag {
+      margin: 0 auto;
       display: block;
       width: 6rem;
       height: 6rem;
       padding-top: 1rem;
       background: #ffffff;
-      -moz-border-radius: 3rem;
-      -webkit-border-radius: 3rem;
-      background-image: url(no.png);
-      background-position:50% 50%;
-      background-repeat:no-repeat;
+      border-radius:6rem;
       .icon {
         color: $startup-pink;
       }
