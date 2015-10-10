@@ -50,16 +50,20 @@ header {
       left: .5rem;
     }
     .sponsor {
-      width: 20vw;
+      width: 15vw;
       min-width: 15rem;
 
       @include mobile {
-        width: 17rem;
+        width: 10rem;
         min-width: 0;
       }
     }
     .plus {
       @include mobile {
+        padding: 2rem 0;
+        font-size: 2rem;
+      }
+      @include tablet {
         padding: 2rem 0;
         font-size: 2rem;
       }
@@ -80,7 +84,6 @@ header {
         width: 100%;
       }
       @include mobile {
-        max-width: 80rem;
         width: 100%;
       }
     }
