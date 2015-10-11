@@ -59,6 +59,10 @@ header {
       }
     }
     .plus {
+      color: white;
+      h2 {
+        font-weight: lighter;
+      }
       @include mobile {
         padding: 2rem 0;
         font-size: 2rem;
