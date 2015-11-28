@@ -125,10 +125,30 @@ header {
   }
 }
 
+/* INFOGRAPHIC */
+
+.infographic {
+  background-color:#ffffff;
+  .infograph {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include mobile {
+        width: 100%;
+      }
+    @include tablet {
+      width: 90%;
+    }
+    @include xs-screen {
+      width: 100%;
+    }
+  }
+}
+
 /* FEATURE STARTUPS */
 
 .startups {
-  background-color:#ffffff;
+  background-color:#f1f1f1;
   padding: 5rem 0;
   .team-info {
     padding-top: 15px;
@@ -159,7 +179,7 @@ header {
         top: -5rem;
         width: 30%;
         margin-bottom: -4rem;
-        border: 8px solid #ffffff;
+        border: 8px solid #f1f1f1;
       }
     }
   }
