@@ -1,12 +1,6 @@
 
 $startup-pink: #E9018B;
 
-@mixin larger-screen {
-  @media only screen and (max-width: 1550px) {
-    @content;
-  }
-}
-
 @mixin mobile {
   @media only screen and (max-width: 550px) {
     @content;
@@ -139,10 +133,7 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 65%;
-    @include larger-screen {
-      max-width: 80%;
-    }
+    width: 75%;
     @include mobile {
         width: 100%;
       }
