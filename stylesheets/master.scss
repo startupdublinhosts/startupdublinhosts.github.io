@@ -139,7 +139,10 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 65%;
+    @include larger-screen {
+      max-width: 80%;
+    }
     @include mobile {
         width: 100%;
       }
@@ -161,9 +164,6 @@ header {
     padding-top: 15px;
     margin:0 auto;
     max-width:80%;
-    @include larger-screen {
-      max-width: 65%;
-    }
     @include xs-screen {
       max-width: 100%;
     }
