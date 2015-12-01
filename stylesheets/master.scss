@@ -1,6 +1,12 @@
 
 $startup-pink: #E9018B;
 
+@mixin larger-screen {
+  @media only screen and (max-width: 1550px) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media only screen and (max-width: 550px) {
     @content;
@@ -155,6 +161,9 @@ header {
     padding-top: 15px;
     margin:0 auto;
     max-width:80%;
+    @include larger-screen {
+      max-width: 65%;
+    }
     @include xs-screen {
       max-width: 100%;
     }
