@@ -1,40 +1,68 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Sheetsee.js</title>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='description' content='sheetsee.js, google, spreadsheet, visualize, data, javascript'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="shortcut icon" href="./favicon.png">
-    <script type='text/javascript' src='./js/highlight.js'></script>
-    <link rel='stylesheet' href='./assets/styles/highlight.css'>
+    <meta charset='utf-8'>
+    <title>Startup Dublin Dataset</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900,400italic|Source+Code+Pro:400' rel='stylesheet' type='text/css'>
-    <link rel='stylesheet' href='./assets/style.css'>
-    <link rel="shortcut icon" href=''/>
+    <link rel="shortcut icon" href="./favicon.png">
+    <script type='text/javascript' src='./js/tabletop1.3.4.js'></script>
+    <script type='text/javascript' src='./js/sheetsee.js'></script>
+    <link rel='stylesheet' type='text/css' href='./assets/style.css'>
   </head>
-  <body class="index">
-    <div class="container">
-<table>
-<thead>
-<tr>
-<th>Datasets</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="./Dataset/startups-table.html">Table Demo</a></td>
-</tr>
-</tbody>
-</table>
-      <footer>
-        <h4 id="use">Contact</h4>
-        <ul>
-        <li><a href="http://www.twitter.com/jllord">@jllord</a></li>
-        <li><a href="https://github.com/jlord/sheetsee.js/issues/new">File an issue</a></li>
-        </ul>
-      </footer>
-    </div>
-    <script>hljs.initHighlightingOnLoad();</script>
-  </body>
+  <style>
+    #Pagination {border-top: 4px solid #ACACAC; margin: 10px 0px; padding-top: 10px; display: inline-block;}
+    #Pagination a {cursor: pointer;}
+    .no-pag {color: #ACACAC; border: none;}
+    .no-pag:hover {color: #EA018C;}
+    input {border: none; border-bottom: 1px solid #333;margin: 10px 0px; width: 200px; font-size: 16px; padding-bottom: 6px;}
+    .tHeader {padding: 8px; cursor: pointer; text-align: left;}
+  </style>
+<body>
+  <div class="container">
+    <h1>All Startups</h1>
+    <p><em><a href="https://docs.google.com/spreadsheets/d/1I37lypLr9v6qxOlJAihdEjGJNeKyKdI21ExlogZEcqM/pubhtml" target="_blank">spreadsheet</a></em><p>
+    <input id="fullTableFilter" type="text" placeholder="filter by.."></input>
+    <div id="fullTable"></div>
+    
+    <footer>
+      <h4 id="use">Contact</h4>
+      <ul>
+        <li><a href="http://www.twitter.com/NiamhBushnell">@NiamhBushnell</a></li>
+        <li><a href="#">Suggest a change</a></li>
+      </ul>
+    </footer>
+</div>
+
+<script id="fullTable_template" type="text/html">
+  <table>
+    <tr><th class="tHeader">Name</th><th class="tHeader">Sector</th><th class="tHeader">Twitter</th></tr>
+      {{#rows}}
+        <tr><td><a href={{website}} target="_blank">{{name}}</a></td><td>{{sector}}</td><td><a href="https://twitter.com/{{twitter}}" target="_blank">{{twitter}}</a></td></tr>
+      {{/rows}}
+  </table>
+</script>
+
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var URL = '1I37lypLr9v6qxOlJAihdEjGJNeKyKdI21ExlogZEcqM'
+    Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
+  })
+
+  function showInfo(data, tabletop) {
+    var tableOptions = {"data": data,
+            "pagination": 50,
+            "tableDiv": "#fullTable",
+            "filterDiv": "#fullTableFilter",
+            "templateID": "fullTable_template"
+            }
+    Sheetsee.makeTable(tableOptions)
+    Sheetsee.initiateTableFilter(tableOptions)
+  }
+
+</script>
+
+</body>
 </html>
