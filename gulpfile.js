@@ -11,6 +11,11 @@ gulp.task('css', function() {
       .pipe(prefixer())
       .pipe(minify({ cache: true }))
       .pipe(gulp.dest('./css'))
+  gulp.src('stylesheets/websummit.scss')
+      .pipe(sass())
+      .pipe(prefixer())
+      .pipe(minify({ cache: true }))
+      .pipe(gulp.dest('./css'))
 })
 
 gulp.task('watch', function() {
