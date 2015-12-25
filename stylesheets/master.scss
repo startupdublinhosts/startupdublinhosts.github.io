@@ -35,7 +35,7 @@ body {
 header {
   background: url("http://i.imgur.com/aLOGkpc.png") no-repeat center bottom;
   background-size: cover;
-  height: 300px;//550px;
+  height: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,6 +89,27 @@ header {
       }
       @include mobile {
         width: 100%;
+      }
+    }
+
+    /* FORM BUTTON */
+
+    .form-btn {
+      margin-top: 4rem;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 2rem;
+      padding-bottom: 5rem;
+
+      h4 {
+        color:$startup-pink;
+      }
+
+      .large {
+        padding: .5rem;
+        width: 20rem;
+        height: 5rem;
       }
     }
   }
@@ -205,7 +226,7 @@ header {
 /* FEATURE STARTUPS */
 
 .startups {
-  background-color:#f1f1f1;
+  background-color:#ffffff;
   padding: 5rem 0;
   .team-info {
     padding-top: 15px;
