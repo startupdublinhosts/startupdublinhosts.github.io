@@ -57,3 +57,17 @@ code {font-family: "Source Code Pro", monospace; font-size: 14px; line-height: 1
 
 /* Map Popup Style */
 .leaflet-popup-content h2 {margin-bottom: 4px; margin-top: auto;}
+
+.form-btn {
+      text-align: center;
+}
+
+.form-btn h4 {
+color:#ADADAD;
+}
+
+.large {
+	padding: .5rem;
+	width: 20rem;
+	height: 5rem;
+}

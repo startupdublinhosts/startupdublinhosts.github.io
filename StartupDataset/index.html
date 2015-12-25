@@ -6,7 +6,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900,400italic|Source+Code+Pro:400' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" href="./favicon.png">
     <script type='text/javascript' src='./js/tabletop1.3.4.js'></script>
     <script type='text/javascript' src='./js/sheetsee.js'></script>
     <link rel='stylesheet' type='text/css' href='./assets/style.css'>
@@ -22,7 +21,8 @@
 <body>
   <div class="container">
     <h1>All Startups</h1>
-    <p><em><a href="https://docs.google.com/spreadsheets/d/1I37lypLr9v6qxOlJAihdEjGJNeKyKdI21ExlogZEcqM/pubhtml" target="_blank">spreadsheet</a></em><p>
+    <p>
+      Welcome to the pre-release database of Dublin Startups. Checkout the spreadsheet <em><a href="http://bit.ly/DublinStartups" target="_blank">here</a></em> and suggest a change or update <em><a href="https://dublinscf.typeform.com/to/z26TZG" data-mode="1" target="_blank">here</a></em></p>.
     <input id="fullTableFilter" type="text" placeholder="filter by.."></input>
     <div id="fullTable"></div>
     
@@ -30,7 +30,7 @@
       <h4 id="use">Contact</h4>
       <ul>
         <li><a href="http://www.twitter.com/NiamhBushnell">@NiamhBushnell</a></li>
-        <li><a href="#">Suggest a change</a></li>
+        <li><em><a href="https://dublinscf.typeform.com/to/z26TZG" data-mode="1" target="_blank">Suggest a change</a></em></li>
       </ul>
     </footer>
 </div>
@@ -39,7 +39,7 @@
   <table>
     <tr><th class="tHeader">Name</th><th class="tHeader">Sector</th><th class="tHeader">Twitter</th></tr>
       {{#rows}}
-        <tr><td><a href={{website}} target="_blank">{{name}}</a></td><td>{{sector}}</td><td><a href="https://twitter.com/{{twitter}}" target="_blank">{{twitter}}</a></td></tr>
+        <tr><td><a href={{url}} target="_blank">{{name}}</a></td><td>{{sector}}</td><td><a href="https://twitter.com/{{twitter}}" target="_blank">{{twitter}}</a></td></tr>
       {{/rows}}
   </table>
 </script>
@@ -47,7 +47,7 @@
 
 <script type="text/javascript">
   document.addEventListener('DOMContentLoaded', function() {
-    var URL = '1I37lypLr9v6qxOlJAihdEjGJNeKyKdI21ExlogZEcqM'
+    var URL = '1AZhvvlpQ4LR6P314LTaRwjqW3oECBti8Zll_mrNqz90'
     Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
   })
 
@@ -63,6 +63,10 @@
   }
 
 </script>
+
+<!-- TypeForm -->
+<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
+
 
 </body>
 </html>
