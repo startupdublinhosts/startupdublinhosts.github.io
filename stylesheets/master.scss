@@ -35,11 +35,14 @@ body {
 header {
   background: url("http://i.imgur.com/aLOGkpc.png") no-repeat center bottom;
   background-size: cover;
-  height: 550px;
+  height: 630px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  @include mobile {
+    height: 500px;
+  }
 
   h1 {
     width: 70%;
@@ -47,8 +50,10 @@ header {
     position: relative;
     padding: 2rem;
     margin: 0;
+    margin-top: 10rem;
     @include mobile {
       left: .5rem;
+      margin-top: 7rem;
     }
     .sponsor {
       width: 15vw;
